@@ -1,7 +1,7 @@
 export const faqs = [
     {
       question: "What video conferencing platforms do you support?",
-      answer: "We support Zoom, Microsoft Teams, and Google Meet recordings. You can upload video files from any of these platforms and our system will extract transcripts accordingly."
+      answer: "We support Zoom, Microsoft Teams, and Google Meet recordings and more."
     },
     {
       question: "What file formats can I upload?",
@@ -13,7 +13,7 @@ export const faqs = [
     },
     {
       question: "Can I edit the transcripts after they're generated?",
-      answer: "Currently, transcripts are read-only. However, you can download them in multiple formats (TXT, SRT, JSON) and edit them using your preferred text editor or subtitle software."
+      answer: "Currently, transcripts are read-only. However, you can download them in multiple formats (TXT, CSV, JSON) and edit them using your preferred text editor or subtitle software."
     },
     {
       question: "How long does transcript processing take?",
@@ -29,6 +29,6 @@ export const faqs = [
     },
     {
       question: "What export formats are available?",
-      answer: "You can download your transcripts in three formats: TXT (plain text), SRT (subtitle format with timestamps), and JSON (structured data for developers)."
+      answer: "You can download your transcripts in three formats: TXT (plain text), CSV (comma-separated values), and JSON (structured data for developers)."
     }
   ]

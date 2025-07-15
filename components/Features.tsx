@@ -7,7 +7,7 @@ const Features = () => {
             <div className="text-center mb-16">
                 <h2 className="text-3xl font-bold mb-4">Key Features</h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
-                    Powerful tools designed to make transcript extraction and management effortless
+                    Mass transcript extraction made easy.
                 </p>
             </div>
 
@@ -15,15 +15,15 @@ const Features = () => {
                 {[
                     {
                         icon: <Upload className="w-6 h-6" />,
-                        title: "Bulk Upload Support",
+                        title: "Bulk Extraction",
                         description:
-                          "Upload multiple files at once with drag & drop functionality for efficient batch processing",
+                          "Extract transcripts from entire recordings at once",
                       },
                       {
                         icon: <Zap className="w-6 h-6" />,
                         title: "Multi-Platform Support",
                         description:
-                          "Extract transcripts from Zoom, Microsoft Teams, and Google Meet recordings",
+                          "Extract transcripts from Zoom, Microsoft Teams, and Google Meet recordings and more.",
                       },
                       {
                         icon: <Search className="w-6 h-6" />,
@@ -35,7 +35,7 @@ const Features = () => {
                         icon: <Download className="w-6 h-6" />,
                         title: "Multiple Export Formats",
                         description:
-                          "Download transcripts as TXT, SRT subtitle files, or structured JSON data",
+                          "Download transcripts as TXT, JSON or CSV formats.",
                       },
                       {
                         icon: <Shield className="w-6 h-6" />,
@@ -51,7 +51,7 @@ const Features = () => {
                       },
                 ].map((feature, index) => (
                     <div key={index} className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-                        <div className="text-blue-600 mb-4">{feature.icon}</div>
+                        <div className="text-blue-600 mb-4 animate-bounce">{feature.icon}</div>
                         <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                         <p className="text-gray-600">{feature.description}</p>
 

@@ -1,4 +1,4 @@
-import { Upload, Zap, Search, Download, Shield, CheckCircle2 } from "lucide-react";
+import { Upload, Zap, Search, Download, CheckCircle2, Book } from "lucide-react";
 
 const UseCases = () => {
   return (
@@ -23,7 +23,7 @@ const UseCases = () => {
                         icon: <Zap className="w-6 h-6" />,
                         title: "Multi-Platform Support",
                         description:
-                          "Extract transcripts from Zoom, Microsoft Teams, and Google Meet recordings",
+                          "Extract transcripts from Zoom, Microsoft Teams, and Google Meet recordings  and more.",
                       },
                       {
                         icon: <Search className="w-6 h-6" />,
@@ -35,13 +35,13 @@ const UseCases = () => {
                         icon: <Download className="w-6 h-6" />,
                         title: "Multiple Export Formats",
                         description:
-                          "Download transcripts as TXT, SRT subtitle files, or structured JSON data",
+                          "Download transcripts as TXT, CSV or structured JSON data",
                       },
                       {
-                        icon: <Shield className="w-6 h-6" />,
-                        title: "Secure Processing",
+                        icon: <Book className="w-6 h-6" />,
+                        title: "Students",
                         description:
-                          "Your data is processed securely with user authentication and private storage",
+                          "Take notes from lectures and meetings. Improve learning retention with searchable text references from recording content.",
                       },
                       {
                         icon: <CheckCircle2 className="w-6 h-6" />,
@@ -51,7 +51,7 @@ const UseCases = () => {
                       },
                 ].map((feature, index) => (
                     <div key={index} className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-                        <div className="text-blue-600 mb-4">{feature.icon}</div>
+                        <div className="text-blue-600 mb-4 animate-bounce" style={{ animationDuration: '2s' }}>{feature.icon}</div>
                         <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                         <p className="text-gray-600">{feature.description}</p>
 
