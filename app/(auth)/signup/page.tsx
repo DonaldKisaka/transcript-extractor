@@ -41,7 +41,10 @@ export default function SignUpPage() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+          <h1 className='text-center text-3xl font-extrabold text-gray-900'>
+            Transcript Extractor
+          </h1>
+          <h2 className="mt-2 text-center text-2xl font-bold text-gray-900">
             Create your account
           </h2>
         </div>
@@ -109,7 +112,7 @@ export default function SignUpPage() {
           </FormGroup>
 
           <div>
-            <Button type='submit' disabled={isPending} className='w-full'>
+            <Button variant='outline' type='submit' disabled={isPending} className='w-full hover:bg-gray-100'>
               Sign up
             </Button>
           </div>
