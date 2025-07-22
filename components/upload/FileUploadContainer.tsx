@@ -23,10 +23,8 @@ export function FileUploadContainer() {
     const file = files.find((f) => f.id === fileId)
     
     if (file?.status === 'success' && file.fileId) {
-      // File is uploaded to database, need to delete from server
       deleteUploadedFile(fileId, file.fileId)
     } else {
-      // File is only in local state, remove directly
       removeFile(fileId)
     }
   }

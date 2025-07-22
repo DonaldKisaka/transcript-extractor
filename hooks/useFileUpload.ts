@@ -10,7 +10,7 @@ interface FileWithPreview extends File {
   progress?: number
   status: 'pending' | 'uploading' | 'success' | 'error'
   error?: string
-  fileId?: string // Database file ID after successful upload
+  fileId?: string 
 }
 
 export const useFileUpload = () => {
@@ -56,13 +56,11 @@ export const useFileUpload = () => {
     setIsUploading(true)
 
     try {
-      // Upload files one by one with progress tracking
       for (const file of pendingFiles) {
         updateFileStatus(file.id, 'uploading')
         updateFileProgress(file.id, 0, 'uploading')
 
         try {
-          // Simulate progress updates (since we can't get real progress from server actions)
           const progressInterval = setInterval(() => {
             updateFileProgress(file.id, Math.min(90, Math.random() * 80 + 10))
           }, 500)

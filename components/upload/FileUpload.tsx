@@ -24,10 +24,10 @@ const ACCEPTED_FILE_TYPES = {
   'audio/mp4': ['.mp4', '.m4a'],
   'audio/wav': ['.wav'],
   'video/mp4': ['.mp4'],
-  'audio/mpeg': ['.mp3'], // In case users have MP3s
+  'audio/mpeg': ['.mp3'], 
 }
 
-const MAX_FILE_SIZE = 500 * 1024 * 1024 // 500MB
+const MAX_FILE_SIZE = 500 * 1024 * 1024 
 
 export function FileUpload({ 
   onFilesAdded, 
@@ -43,7 +43,6 @@ export function FileUpload({
       console.error('Rejected files:', rejectedFiles)
     }
 
-    // Process accepted files
     const filesWithPreview: FileWithPreview[] = acceptedFiles.map((file, index) => ({
       ...file,
       id: `${Date.now()}-${index}`,
@@ -81,7 +80,6 @@ export function FileUpload({
 
   return (
     <div className="w-full max-w-2xl mx-auto">
-      {/* Main Dropzone - Clean & Minimal like YouTubeTranscripts.io */}
       <div
         {...getRootProps()}
         className={`
@@ -139,18 +137,15 @@ export function FileUpload({
         </div>
       </div>
 
-      {/* Selected Files - Minimal List */}
       {uploadedFiles.length > 0 && (
         <div className="mt-8 space-y-3">
           {uploadedFiles.map((file) => (
             <div key={file.id} className="group bg-white border border-gray-200 rounded-xl p-4 hover:border-gray-300 transition-colors">
               <div className="flex items-center space-x-4">
-                {/* File Icon */}
                 <div className="flex-shrink-0">
                   {getFileIcon(file)}
                 </div>
                 
-                {/* File Info */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between mb-2">
                     <p className="text-sm font-medium text-gray-900 truncate pr-2">
@@ -173,7 +168,6 @@ export function FileUpload({
                     </div>
                   </div>
                   
-                  {/* Status & Progress */}
                   <div className="space-y-2">
                     {file.status === 'uploading' && (
                       <div className="w-full bg-gray-200 rounded-full h-1">
