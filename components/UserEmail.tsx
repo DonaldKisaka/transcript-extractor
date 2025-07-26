@@ -1,4 +1,4 @@
-import { createClient } from "@/lib/supabase/client";
+import { createClient } from "@/lib/supabase/server";
 import { UserIcon } from "lucide-react";
 import SignOutButton from "./SignOutButton";
 
@@ -17,7 +17,7 @@ const UserEmail = async() => {
                 <span className="text-sm font-medium text-slate-800 truncate block leading-tight">
                     {user?.email}
                 </span>
-                <span className="text-xs text-slate-500 -mt-0.5 block">Free Plan</span>
+
             </div>
         </div>
         <SignOutButton />
